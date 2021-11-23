@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<script>
+			//window.alert("Privet");  message
+			//var a = window.confirm("Privet!");   yes/no
+			//var a = window.prompt("Введите имя");    //text
+			//window.alert("Привет, "+a);
+/*
+			var a = window.prompt("Введите a");
+			var b = window.prompt("Введите b");
+
+			window.alert(parseInt(a)+parseInt(b));
+			window.alert(a-b);
+			window.alert(a*b);
+			window.alert(a/b);
+			window.alert(a%b);
+			*/
+			/*var q = Math.random();
+			alert(q);
+			document.write(q);
+			*/
+
+			var q = Math.round(Math.random()*89);
+			var w = Math.round(Math.random()*67);
+			var z = Math.round(Math.random());
+			if (z==0){
+				var zn = "+";
+			}
+			else{
+				var zn = "-";
+			}
+			var sum = eval(String(q) +zn + String(w));
+			
+			var str = "Чему равна сумма "+String(q)+ zn + String(w) + " ?";
+			var pr = window.prompt(str);
+
+			if (pr==sum){
+				alert("OK");
+			}
+			else{
+				alert("Error!");
+			}
+
+
+			//typeof()
+		</script>
+	</head>
+
+	<body>
+		<h1>Script</h1>
+
+		<script>
+
+		</script>
+	</body>
+</html>
