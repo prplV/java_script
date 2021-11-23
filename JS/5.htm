@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<script>
+			function z()
+			{
+				var id1 = document.frm.nm1.value;
+				var id2 = document.frm.cntr.value;
+
+				console.log(id1, id2);
+				document.write("Hi, "+String(id1)+" You're from "+String(id2));
+			}
+		</script>
+	</head>
+
+	<body>
+		<h1>Script</h1>
+		<form action="1.php" method="GET" name="frm">
+			
+			<input type="text" name="nm1" placeholder="name" value=""><br>
+			<input type="text" name="cntr" placeholder="country" value=""><br>
+			<input type="button" name="btn" value="greeting" onclick="z();">
+		
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<script>
+			function z()
+			{
+				var t1 = document.frm.n1.value;
+				var t2 = document.frm.n2.value;
+				if (t1 == t2){
+					//alert("OK!");
+					var el1 = document.getElementById("n1");
+					el1.style.background = "green";
+					var el2 = document.getElementById("n2");
+					el2.style.background = "green";
+					var el3 = document.getElementById("txt");
+					el3.innerHTML="OK!";
+				}
+				else{
+					//alert("Error!");
+					var el1 = document.getElementById("n1");
+					el1.style.background = "red";
+					var el2 = document.getElementById("n2");
+					el2.style.background = "red";
+					var el3 = document.getElementById("txt");
+					el3.innerHTML="ERROR!";
+				}
+			}
+			
+			function f()
+			{
+				var el1 = document.getElementById("n1");
+				el1.value="";
+				el1.style.background = "#00ff00";
+
+				var el2 = document.getElementById("n2");
+				el2.value="";
+				el2.style.background = "ff0000";
+
+				var el3 = document.getElementById("n3");
+				el3.value="";
+				el3.style.background = "0000ff";
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<h1>Script</h1>
+		<form action="1.php" method="POST" name="frm">
+			<input type="text" name="n1"> <br>
+			<input type="text" name="n2"> <br>
+			<input type="button" name="btn" value="Button" onclick="z();"> 
+			<input type="button" name="btn" value="Reset" onclick="f();"> 
+		</form>
+		<br>
+		<span id="txt"></span>
+	</body>
+</html>
