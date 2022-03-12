@@ -1,0 +1,71 @@
+<script>
+    window.onload = function() {
+        let mas_btn = document.querySelectorAll(".click");
+        mas_btn.forEach(function(elem) {
+            elem.addEventListener('click', function() {
+                let par = this.parentElement;
+                let num = par.getAttribute("data-num");
+                obj.sub(par, num);
+            });
+        });
+        let obj = {
+            title: ['Название 1', 'Название 2', 'Название 3'],
+            description: ['Краткое описание 1', 'Краткое описание 2', 'Краткое описание 3'],
+            price: ['Цена 1', 'Цена 2', 'Цена 3'],
+            sub: function(par, num) {
+
+                par.querySelector(".title").innerHTML = this.title[num];
+                par.querySelector(".desc").innerHTML = this.description[num];
+                par.querySelector(".price").innerHTML = this.price[num];
+            }
+        }
+
+    }
+
+</script>
+
+<html>
+
+<head>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <div class="card">
+                    <p>Название</p>
+                    <p>Описание</p>
+                    <p>Цена</p>
+                    <p><br></p>
+                </div>
+            </td>
+            <td>
+                <div class="card" data-num="0">
+                    <p class="title"><br></p>
+                    <p class="desc"><br></p>
+                    <p class="price"><br></p>
+                    <button class="click">Заполнить</button>
+                </div>
+            </td>
+            <td>
+                <div class="card" data-num="1">
+                    <p class="title"><br></p>
+                    <p class="desc"><br></p>
+                    <p class="price"><br></p>
+                    <button class="click">Заполнить</button>
+                </div>
+            </td>
+            <td>
+                <div class="card" data-num="2">
+                    <p class="title"><br></p>
+                    <p class="desc"><br></p>
+                    <p class="price"><br></p>
+                    <button class="click">Заполнить</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

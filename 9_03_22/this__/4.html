@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        window.onload = function() {                   
+            let obj = {
+                fun1: function(){
+                    let but1 = document.querySelector('#btn1');   
+                    but1.addEventListener('click', function(){
+                        console.log("Ананимная функция");
+                        console.log(this);
+                    });
+                },//элемент, на котором произошло событие
+                fun2: function(){
+                    let but2 = document.querySelector('#btn2');   
+                    but2.addEventListener('click', () =>{
+                        console.log("Стрелочная функция");
+                        console.log(this);
+                    });
+                }, //содержимое объекта
+            }
+            obj.fun1();
+            obj.fun2();
+        }
+
+    </script>
+
+    <input type="button" value="Событие 1" id="btn1">
+    <input type="button" value="Событие 2" id="btn2">
+</body>
+
+</html>
+

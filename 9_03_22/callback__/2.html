@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        $('td').click(function() {
+            console.log(this);
+        })
+        */
+        window.onload = function() {
+            let fun = function() {
+                console.log(this);
+            }
+            let td = document.querySelectorAll('td');
+            /*
+            for (var i = 0; i < td.length; i++){
+                td[i].addEventListener('click', fun);
+            }
+            */
+            td.forEach(function (elem){
+                elem.addEventListener('click', fun);
+            })
+            
+            let mas = [1, 2, 3, 4, 5];
+            let mas_2 = mas.map(function(elem){
+                return elem*2;
+            })
+            console.log(mas);
+            console.log(mas_2);
+            console.log(mas);
+        }
+
+    </script>
+
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+        </tr>
+    </table>
+</body>
+
+</html>

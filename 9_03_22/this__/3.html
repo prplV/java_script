@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let fun1 = function() {
+            console.log(this);
+        }
+
+        function fun2() {
+            console.log(this);
+        }
+        let obj = {
+            a: [1, 2, 3],
+            fun3: function (){
+                console.log(this);
+            },
+            fun3_2: fun1,
+            fun3_3: fun2,
+            fun3_4: () => {
+                console.log(this);
+            },
+        }
+        fun1();
+        fun2();
+        obj.fun3();
+        obj.fun3_2();
+        obj.fun3_3();
+        obj.fun3_4();
+    </script>
+</body>
+
+</html>

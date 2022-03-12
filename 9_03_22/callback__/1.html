@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /*
+        let a = function(){
+            alert("fun");
+        };
+        
+        function b(callback){
+            console.log("fun b");
+            callback();
+        }
+        b(a); // a без (), иначе не будет работать  
+        */
+        window.onload = function() {
+            let fun = function() {
+                console.log("Мы нажали на кнопку");
+            }
+            let but = document.querySelector('#btn');
+            but.addEventListener('click', fun);
+        } // функция обратного вызова эквивалетна : 
+        /*
+        $('#but').click(function() {
+            console.log("Мы нажали на кнопку");
+        })
+        */
+
+    </script>
+
+    <input type="button" value="Событие" id="btn">
+</body>
+
+</html>
