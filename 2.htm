@@ -1,0 +1,37 @@
+﻿<script>
+	let person = {
+		name: 'Petya',
+		login: 'pet200',
+		password: 'a123da',
+		age: '20',
+		f: function(){
+			console.log('123123');
+		}
+	}
+	
+	//let polz = obj.name;
+	let {name: polz, age} = person;
+	
+	//console.log(polz + ' ' + age);
+	
+	//let mas = Object.entries(person.f);
+	//let mas = Object.keys(person);
+	let mas = Object.values(person);
+	console.log(mas);
+	
+	let mas_2 = [1, 5, 6, 'sss'];
+	
+	let [a, b, c, ...arr] = mas_2;
+	console.log(a + ' ' + b + ' ' + c);
+	console.log(arr);
+	
+	
+	function f_3(){
+		let m = [...arguments];
+		console.log(m);
+	}
+	
+	f_3(1,2,3,4,5,6,7,8);
+	
+</script>
+

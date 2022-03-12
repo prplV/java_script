@@ -1,0 +1,131 @@
+﻿<style href="style.css" rel="stylesheet"></style>
+<style>
+body{
+	text-align: center;
+}
+.window-offer{
+	position: relative;
+	background-color: #ccc;
+	height: 200px;
+	width: 600px;
+	margin: auto;
+}
+.window-offer-name{
+	position: relative;
+	background-color: #aaa;
+	height: 30px;
+}
+.window-offer-descripton{
+	background-color: #bbb;
+	height: 100px;
+	position: relative;
+}
+.window-offer-price{
+	position: relative;
+	position: relative;
+	background-color: #aaa;
+	height: 45px;
+	
+}
+.window-offer-submit{
+	position: relative;
+	
+}
+.window-offer-submit:hover{
+	background-color: #ddd;
+	transitiom: 0.3s;
+}
+.text{
+	font-size: 21px;
+}
+</style>
+<script>
+	function pr(){
+		alert('test_function');
+	}
+	
+	let obj ={
+		name: 'petya',
+		surname: 'petrov',
+		age: '20',
+		s:function(){
+			alert('Mehod1');
+		},
+		s_2(){
+			alert('Mehod2');
+		},
+		s_3: pr,
+	}
+	console.log(obj);
+	
+	/*
+	console.log(obj.name);
+	console.log(obj['age']);
+	*/
+	
+	let person ={
+		name: ['window-offer-name1255252525','window-offer-name2','window-offer-name3'],
+		description: ['dawd ',' ',' '],
+		price: ['dawda ',' ',' '],
+		title: ['dawdw ',' ',' '],
+		
+		add:function(num){
+			console.log("Script is working!");
+			/*
+			let a = this.name[num];
+			console.log(a);
+			*/
+			
+			document.querySelector("[data-name='" + num + "'").innerHTML = this.name[num];
+			document.querySelector("[data-desc='" + num + "'").innerHTML = this.description[num];
+			document.querySelector("[data-price='" + num + "'").innerHTML = this.price[num];
+		}
+	}
+</script>
+
+<body>
+	<div class="window-offer" data-window='0'>
+		<div class="window-offer-name" data-name='0'>
+			window-offer-name1
+		</div>
+		<div class="window-offer-descripton" data-desc='0'>
+			window-offer-descripton1
+		</div>
+		<div class="window-offer-price" data-price='0'>
+			window-offer-price1
+		</div>
+		<div class="window-offer-submit" data-submit='0' onclick="person.add(0);">
+			<span class="text">1</span>
+		</div>
+	</div>
+	<br>
+	<div class="window-offer" data-window="1">
+		<div class="window-offer-name" data-name="1">
+			window-offer-name2
+		</div>
+		<div class="window-offer-descripton" data-desc="1">
+			window-offer-descripton2
+		</div>
+		<div class="window-offer-price" data-price="1">
+			window-offer-price2
+		</div>
+		<div class="window-offer-submit" data-submit="0" onclick="person.add(1);">
+			<span class="text">2</span>
+		</div>
+	</div>
+	<br>
+	<div class="window-offer" data-window="2">
+		<div class="window-offer-name" data-name="2">
+			window-offer-name3
+		</div>
+		<div class="window-offer-descripton" data-desc="2">
+			window-offer-descripton3
+		</div>
+		<div class="window-offer-price" data-price="2">
+			window-offer-price3
+		</div>
+		<div class="window-offer-submit" data-window-submit="0" onclick="person.add(2);">
+			<span class="text">3</span>
+		</div>
+	</div>
+</body>
